@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2: Cámara y Medios</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-900 text-gray-100 min-h-screen p-8 flex flex-col items-center justify-center font-sans">
+
+    <div class="bg-gray-800 p-8 rounded-2xl shadow-xl border border-gray-700 w-full max-w-2xl text-center">
+        <h1 class="text-2xl font-bold mb-6 text-indigo-400">Captura de Cámara Web</h1>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+            <!-- Contenedor del Video en Vivo -->
+            <div class="flex flex-col items-center">
+                <p class="text-sm text-gray-400 mb-2">Video en tiempo real</p>
+                <video id="video" class="w-full bg-black rounded-lg border-2 border-gray-600 aspect-video object-cover"
+                    autoplay playsinline></video>
+            </div>
+
+            <!-- Contenedor de la Captura (Canvas) -->
+            <div class="flex flex-col items-center">
+                <p class="text-sm text-gray-400 mb-2">Fotografía capturada</p>
+                <canvas id="canvas"
+                    class="w-full bg-gray-900 rounded-lg border-2 border-dashed border-gray-600 aspect-video object-cover"></canvas>
+            </div>
+        </div>
+
+        <div class="flex gap-4 justify-center">
+            <button id="btn-iniciar"
+                class="bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-3 px-6 rounded-xl transition-all shadow-md">
+                Encender Cámara
+            </button>
+            <button id="btn-capturar" disabled
+                class="bg-emerald-600 hover:bg-emerald-500 disabled:bg-gray-600 disabled:text-gray-400 text-white font-bold py-3 px-6 rounded-xl transition-all shadow-md">
+                Tomar Fotografía
+            </button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
