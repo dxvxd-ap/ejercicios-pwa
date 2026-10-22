@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1: GPS y Permisos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-900 text-gray-100 min-h-screen p-8 flex flex-col items-center justify-center font-sans">
+
+    <div class="bg-gray-800 p-8 rounded-2xl shadow-xl border border-gray-700 w-full max-w-md">
+        <h1 class="text-2xl font-bold mb-6 text-indigo-400 text-center">Consulta de Ubicación</h1>
+
+        <!-- Contenedor del estado del permiso -->
+        <div class="mb-6 bg-gray-900 p-4 rounded-lg border border-gray-700">
+            <p class="text-sm text-gray-400">Estado de la Permissions API:</p>
+            <p id="estado-permiso" class="text-lg font-semibold text-yellow-400">Consultando...</p>
+        </div>
+
+        <button id="btn-obtener-gps"
+            class="w-full bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-3 px-4 rounded-xl transition-all shadow-md mb-6">
+            Obtener mis Coordenadas
+        </button>
+
+        <!-- Contenedor de las coordenadas -->
+        <div id="resultado-coordenadas" class="hidden bg-gray-900 p-4 rounded-lg border border-gray-600">
+            <p class="text-sm text-gray-400 mb-2">Tu ubicación exacta es:</p>
+            <div class="font-mono text-lg">
+                <p>Latitud: <span id="texto-latitud" class="text-green-400"></span></p>
+                <p>Longitud: <span id="texto-longitud" class="text-green-400"></span></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
