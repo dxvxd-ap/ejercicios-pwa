@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4: IndexedDB</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-900 text-gray-100 min-h-screen p-8 font-sans flex justify-center items-start pt-10">
+
+    <div class="bg-gray-800 p-8 rounded-2xl shadow-xl border border-gray-700 w-full max-w-lg">
+        <h1 class="text-2xl font-bold mb-6 text-indigo-400 text-center">Base de Datos Local (IndexedDB)</h1>
+
+        <!-- Formulario para Guardar -->
+        <div class="flex gap-2 mb-6">
+            <input type="text" id="input-nombre" placeholder="Nombre del paciente..."
+                class="w-full bg-gray-900 border border-gray-600 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-indigo-500">
+            <button id="btn-guardar"
+                class="bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-3 px-6 rounded-lg transition-all shadow-md">
+                Guardar
+            </button>
+        </div>
+
+        <!-- Lista para Consultar y Eliminar -->
+        <div class="bg-gray-900 rounded-lg border border-gray-700 p-4 min-h-[200px]">
+            <h2 class="text-sm text-gray-400 mb-4 border-b border-gray-700 pb-2">Registros Guardados Offline</h2>
+            <ul id="lista-registros" class="flex flex-col gap-3">
+                <!-- Los registros se inyectarán aquí -->
+            </ul>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
