@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3: Notificaciones y SW</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-900 text-gray-100 min-h-screen p-8 flex flex-col items-center justify-center font-sans">
+
+    <div class="bg-gray-800 p-8 rounded-2xl shadow-xl border border-gray-700 w-full max-w-md text-center">
+        <h1 class="text-2xl font-bold mb-6 text-indigo-400">Notificaciones Locales</h1>
+
+        <div class="mb-6 bg-gray-900 p-4 rounded-lg border border-gray-700">
+            <p class="text-sm text-gray-400 mb-1">Estado del Permiso:</p>
+            <p id="estado-permiso" class="text-lg font-semibold text-yellow-400">Sin solicitar ⚠️</p>
+        </div>
+
+        <div class="flex flex-col gap-4">
+            <button id="btn-permiso"
+                class="w-full bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-3 px-4 rounded-xl transition-all shadow-md">
+                1. Solicitar Permiso
+            </button>
+
+            <button id="btn-notificar" disabled
+                class="w-full bg-emerald-600 hover:bg-emerald-500 disabled:bg-gray-600 disabled:text-gray-400 text-white font-bold py-3 px-4 rounded-xl transition-all shadow-md">
+                2. Disparar Notificación
+            </button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
